@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Polyglot(Korean): 12.8B</title>
-        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}"/>
+        <title>Polyglot(Korean): 5.8B</title>
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/img/libre.svg')}}"/>
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -107,11 +107,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#!">Polyglot(Korean): 12.8B</a>
+                <a class="navbar-brand" href="#!">Polyglot(Korean): 5.8B</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="https://huggingface.co/jason9693/SoongsilBERT-beep-base">Huggingface</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://huggingface.co/EleutherAI/polyglot-ko-5.8b">Huggingface</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Paper(To Be Cont.)</a></li>
                     </ul>
                 </div>
@@ -120,36 +120,28 @@
         <header class="masthead text-center text-white">
             <div class="masthead-content">
                 <div class="container">
-                    <h1 class="masthead-heading mb-0">Polyglot(Korean): 12.8B</h1>
+                    <h1 class="masthead-heading mb-0">Polyglot(Korean): 5.8B</h1>
                     <h2 class="masthead-subheading mb-0">Korean Large-Scale Language Model</h2>
-                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="https://github.com/jason9693/SoongsilBERT-base-beep-deploy">Github repository</a>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="https://github.com/EleutherAI/polyglot">Github repository</a>
                 </div>
             </div>
-            <div class="bg-circle-1 bg-circle"></div>
+            <!-- <div class="bg-circle-1 bg-circle"></div>
             <div class="bg-circle-2 bg-circle"></div>
             <div class="bg-circle-3 bg-circle"></div>
-            <div class="bg-circle-4 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div> -->
         </header>
         <section>
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 order-lg-2">
                         <div class="p-5">
-                            <img class="img-fluid rounded-circle" src="{{url_for('static', filename='assets/img/03.jpg')}}" alt="..." />
+                            <img class="img-fluid rounded-circle" src="{{url_for('static', filename='assets/img/eleuther.png')}}" alt="..." />
                         </div>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
                             <h2 class="display-4">About</h2>
-                            <p><b>SoongsilBERT:BEEP!</b>은 양기창(카카오) 연구원, 장원준(카카오) 연구원, 조원익(서울대학교) 연구원으로 구성된 연구팀이 한국어 혐오 발화 데이터셋인 BEEP!<a href="#note1" id="ref1" title="Moon et al., 2019">[1]</a>
-                                으로 SoongsilBERT를 학습시킨 혐오 발언 분류 모델입니다. 
-                                아래에는 모델의 분류 성능을 실제로 확인해볼 수 있는 데모가 준비돼 있습니다. 
-                                입력창에 문장을 입력하면 일반글/공격발언/차별발언 셋 중 하나로 분류한 결과를 받아볼 수 있습니다. 
-                                <br>
-                                참고로, SoongsilBERT(KcBERTv2)는 KcBERT<a href="#note2" id="ref2" title="Lee et al., 2020">[2]</a> 학습에 활용된 뉴스 댓글 데이터와 대학교 커뮤니티 및 공지사항 등 웹에서 작성된 
-                                각종 텍스트<a href="#note3" id="ref3" title="구어체 데이터">[3]</a> 를 사전학습한 
-                                RoBERTa<a href="#note4" id="ref4" title="Liu et al., 2019">[4]</a> 기반의 언어 모델입니다. 
-                                웹에서 빠르게 양산되는 각종 신조어와 구어체 문장 분석에 큰 어려움을 겪는 기존 자연어 처리 기술의 한계를 극복하고자 숭실대학교 동아리인 YourSSU와 SSUML에서 개발했습니다. 
+                            <p>When we started our research, we have already had 1.2TB of Korean data collected by <b>TUNiB</b>. Before we collected a large amount of multilingual data, we decided to try Korean modeling with the dataset we already had. This Korean model can be used for performance comparison with the multilingual models, and this model itself would help many Korean companies and researchers.
                             </p>
 
                         </div>
@@ -194,7 +186,7 @@
             
         </section>
         <hr width="100%">
-        <section>
+        <!-- <section>
             <div class="container">
                 <div class="row align-items-center">
                     <dl class="result p-5"></dlclass>
@@ -210,7 +202,7 @@
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
         <!-- Footer-->
         <footer class="py-5 bg-black">
