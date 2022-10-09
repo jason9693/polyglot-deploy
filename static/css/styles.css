@@ -413,7 +413,7 @@ h6, .h6 {
 }
 
 .display-4 {
-  font-size: 2.0rem;
+  font-size: 1.0rem;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -2099,6 +2099,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .form-text {
@@ -10035,37 +10036,51 @@ h3 {
 
 header.masthead {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  /* background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%); */
-  background-image: url("../assets/img/06.png");
+  z-index: 1;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%), url("../assets/img/06.png");
   background-size: 400px, 400px;
   /* background-repeat: no-repeat; */
   background-position: absolute;
   background-attachment: scroll;
-  /* background-size: cover; */
 }
+/* header.masthead::after {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(7rem + 72px);
+  padding-bottom: 7rem;
+  content: "";
+  background: url("../assets/img/06.png");
+  background-size: 400px, 400px;
+  background-position: absolute;
+  background-attachment: scroll;
+  opacity: 30%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+} */
 header.masthead .masthead-content {
   z-index: 1;
   position: relative;
 }
 header.masthead .masthead-content .masthead-heading {
   font-size: 4rem;
-  background: #040505;
-  border-radius: 1rem !important;
+  color: #000;
+  /* border-radius: 1rem !important; */
   /* linear-gradient(0deg, #ff6a00 0%, #ee0979 100%); */
 }
 header.masthead .masthead-content .masthead-subheading {
-  font-size: 5rem;
-  background: #040505;
-  border-radius: 1rem !important;
+  font-size: 3rem;
+  color: #000;
+  /* border-radius: 1rem !important; */
   /* linear-gradient(0deg, #ff6a00 0%, #ee0979 100%); */
 }
 header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   background-image: url("../assets/img/06.png");
   background-size: 300px, 300px;
   /* background: linear-gradient(0deg, #ee0979 0%, #f8f9fa 100%); */
