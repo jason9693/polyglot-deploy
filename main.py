@@ -24,6 +24,18 @@ CHECK_INTERVAL = 0.1
 
 host_addr = os.environ['HOST_URL'] + '/generate' #
 
+
+class EscapeSequenceAdapter:
+    # \n => <|endoftext|>
+    def encode(self, s):
+        return s.replace('\n', '<|endoftext|>')
+    
+    def decode(self, s):
+        return s.replace('<|endoftext|>', '\n')
+
+
+adapter = EscapeSequenceAdapter()
+
 ##
 # Request handler.
 # GPU app can process only one request in one time.
@@ -56,6 +68,8 @@ def handle_requests_by_batch():
                 if types != "original":
                     outputs = outputs[len(txt):]
                     pass
+                
+                outputs = adapter.decode(outputs)
                 
                 outputs = '<br>'.join(outputs.split('\n'))
                 request["output"] = ({0: outputs}, 200)
@@ -96,6 +110,9 @@ def generate(types):
     try:
         args = []
         text = request.form['text'].replace('\r\n', '\n')
+        
+        text = adapter.encode(text)
+
         args.append(types)
         args.append(text)
 
