@@ -10,7 +10,8 @@ RUN apt-get update && \
 
 
 RUN pip install --upgrade pip
-RUN pip install flask \
+RUN pip install requests \
+    flask \
     waitress 
 
 WORKDIR /app
