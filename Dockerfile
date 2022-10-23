@@ -10,8 +10,7 @@ RUN apt-get update && \
 
 
 RUN pip install --upgrade pip
-RUN pip install transformers==3.5.0 \
-    flask \
+RUN pip install flask \
     waitress 
 
 WORKDIR /app

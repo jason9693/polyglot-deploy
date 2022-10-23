@@ -1,8 +1,6 @@
 import logging
 
 from flask import Flask, request, render_template
-import torch
-from torch.nn import functional as F
 import traceback
 
 import os
@@ -110,7 +108,7 @@ def generate(types):
     try:
         args = []
         text = request.form['text'].replace('\r\n', '\n')
-        
+
         text = adapter.encode(text)
 
         args.append(types)
